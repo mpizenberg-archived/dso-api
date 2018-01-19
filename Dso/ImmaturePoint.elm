@@ -13,27 +13,8 @@ module Dso.ImmaturePoint
 
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)
+import Dso.NumType exposing (Mat22f, Mat33f, Vec2f, Vec3f)
 import Dso.Residuals
-
-
--- UNKNOWN ###########################################################
-
-
-type Mat22f
-    = Mat22f
-
-
-type Mat33f
-    = Mat33f
-
-
-type Vec2f
-    = Vec2f
-
-
-type Vec3f
-    = Vec3f
-
 
 
 -- MODEL #############################################################

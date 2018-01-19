@@ -12,25 +12,11 @@ module Dso.FullSystem
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
 import Dso.ImmaturePoint exposing (ImmaturePoint, ImmaturePointTemporaryResidual)
+import Dso.NumType exposing (MatXX, Vec10, Vec3, Vec4, VecXf)
+import Dso.Residuals exposing (PointFrameResidual)
 
 
 -- UNKNOWN ###########################################################
-
-
-type Vec3
-    = Vec3
-
-
-type Vec4
-    = Vec4
-
-
-type VecXf
-    = VecXf
-
-
-type MatXX
-    = MatXX
 
 
 type Output3DWrapper
@@ -256,4 +242,14 @@ loadStateBackup model =
 
 calcLEnergy : FullSystem -> Float
 calcLEnergy model =
+    Debug.crash "TODO"
+
+
+calcLMnergy : FullSystem -> Float
+calcLMnergy model =
+    Debug.crash "TODO"
+
+
+linearizeAll_Reductor : Bool -> Array PointFrameResidual -> Int -> Int -> Vec10 -> Int -> FullSystem -> FullSystem
+linearizeAll_Reductor fixLinearization toRemove min max stats tid model =
     Debug.crash "TODO"

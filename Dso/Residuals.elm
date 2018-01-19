@@ -10,7 +10,11 @@ module Dso.Residuals
 
 -}
 
+-- import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+
 import Array exposing (Array)
+import Dso.AvoidCyclic exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.NumType exposing (Vec3f)
 import External.Eigen as Eigen
 
 
@@ -21,24 +25,8 @@ type EFResidual
     = EFResidual
 
 
-type PointHessian
-    = PointHessian
-
-
-type FrameHessian
-    = FrameHessian
-
-
-type CalibHessian
-    = CalibHessian
-
-
 type RawResidualJacobian
     = RawResidualJacobian
-
-
-type Vec3f
-    = Vec3f
 
 
 

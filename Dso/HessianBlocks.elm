@@ -3,56 +3,22 @@ module Dso.HessianBlocks
         ( CalibHessian
         , FrameHessian
         , PointHessian
+        , defines
         )
 
 {-| module ...
 
-@docs FrameHessian, CalibHessian, PointHessian
+@docs FrameHessian, CalibHessian, PointHessian, defines
 
 -}
 
 import Array exposing (Array)
+import Dso.NumType exposing (AffLight, Mat33f, Mat42, Mat66, SE3, Vec10, Vec2, Vec2f, Vec3f, Vec6, VecC)
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Eigen as Eigen
 
 
 -- UNKNOWN ###########################################################
-
-
-type Vec2
-    = Vec2
-
-
-type Vec2f
-    = Vec2f
-
-
-type Vec3f
-    = Vec3f
-
-
-type Vec6
-    = Vec6
-
-
-type Vec10
-    = Vec10
-
-
-type VecC
-    = VecC
-
-
-type Mat33f
-    = Mat33f
-
-
-type Mat42
-    = Mat42
-
-
-type Mat66
-    = Mat66
 
 
 type EFFrame
@@ -67,16 +33,8 @@ type ImmaturePoint
     = ImmaturePoint
 
 
-type SE3
-    = SE3
-
-
 type MinimalImageB3
     = MinimalImageB3
-
-
-type AffLight
-    = AffLight
 
 
 type EFPoint
@@ -87,6 +45,31 @@ type EFPoint
 -- MODEL #############################################################
 
 
+type alias Defines =
+    { scale_idepth : Float
+    , scale_xi_rot : Float
+    , scale_xi_trans : Float
+    , scale_f : Float
+    , scale_c : Float
+    , scale_w : Float
+    , scale_a : Float
+    , scale_b : Float
+
+    -- inverses
+    , scale_idepth_inverse : Float
+    , scale_xi_rot_inverse : Float
+    , scale_xi_trans_inverse : Float
+    , scale_f_inverse : Float
+    , scale_c_inverse : Float
+    , scale_w_inverse : Float
+    , scale_a_inverse : Float
+    , scale_b_inverse : Float
+    }
+
+
+{-| whatever
+-}
+defines : Defines
 defines =
     { scale_idepth = 1.0
     , scale_xi_rot = 1.0

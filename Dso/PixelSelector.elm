@@ -10,7 +10,6 @@ import Array exposing (Array)
 import External.Eigen as Eigen
 
 
--- UNKNOWN ###########################################################
 -- MODEL #############################################################
 
 

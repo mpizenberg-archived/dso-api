@@ -7,15 +7,8 @@ module Dso.PixelSelector2 exposing (PixelSelector)
 -}
 
 import Array exposing (Array)
+import Dso.HessianBlocks exposing (FrameHessian)
 import External.Eigen as Eigen
-
-
--- UNKNOWN ###########################################################
-
-
-type FrameHessian
-    = FrameHessian
-
 
 
 -- MODEL #############################################################

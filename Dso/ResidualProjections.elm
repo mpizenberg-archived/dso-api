@@ -1,37 +1,20 @@
-module Dso.ResidualProjections exposing (scale_idepth)
+module Dso.ResidualProjections exposing (derive_idepth)
 
 {-| module ...
 
-@docs scale_idepth
+@docs derive_idepth
 
 -}
 
--- UNKNOWN ###########################################################
-
-
-{-| whatever
--}
-scale_idepth : Float
-scale_idepth =
-    Debug.crash "TODO"
-
-
-type Vec3f
-    = Vec3f
-
-
-type Mat33f
-    = Mat33f
-
-
-type CalibHessian
-    = CalibHessian
-
+import Dso.HessianBlocks exposing (CalibHessian)
+import Dso.NumType exposing (Mat33f, Vec3f)
 
 
 -- FUNCTIONS #########################################################
 
 
+{-| whatever
+-}
 derive_idepth : Vec3f -> Float -> Float -> Int -> Int -> Float -> Float -> Float -> Float
 derive_idepth t u v dx dy dxInterp dyInterp drescale =
     Debug.crash "TODO"

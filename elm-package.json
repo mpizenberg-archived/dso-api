@@ -7,6 +7,8 @@
         "."
     ],
     "exposed-modules": [
+        "Dso.NumType",
+        "Dso.FullSystem",
         "Dso.HessianBlocks",
         "Dso.ImmaturePoint",
         "Dso.PixelSelector",
