@@ -12,7 +12,8 @@ module Dso.FullSystem
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
 import Dso.ImmaturePoint exposing (ImmaturePoint, ImmaturePointTemporaryResidual)
-import Dso.NumType exposing (MatXX, Vec10, Vec3, Vec4, VecXf)
+import Dso.NumType exposing (MatXX, Vec10, Vec3, Vec4, Vec5, VecX, VecXf)
+import Dso.PixelSelector2 exposing (PixelSelector)
 import Dso.Residuals exposing (PointFrameResidual)
 
 
@@ -25,6 +26,46 @@ type Output3DWrapper
 
 type ImageAndExposure
     = ImageAndExposure
+
+
+type Ofstream
+    = Ofstream
+
+
+type Mutex
+    = Mutex
+
+
+type Condition_variable
+    = Condition_variable
+
+
+type Thread
+    = Thread
+
+
+type FrameShell
+    = FrameShell
+
+
+type CoarseInitializer
+    = CoarseInitializer
+
+
+type CoarseDistanceMap
+    = CoarseDistanceMap
+
+
+type CoarseTracker
+    = CoarseTracker
+
+
+type EnergyFunctional
+    = EnergyFunctional
+
+
+type IndexThreadReduce a
+    = IndexThreadReduce a
 
 
 
@@ -44,6 +85,70 @@ type alias FullSystem =
 
     -- all following attributes are private
     , hCalib : CalibHessian
+
+    -- logging stuff
+    , calibLog : Ofstream
+    , numsLog : Ofstream
+    , errorsLog : Ofstream
+    , eigenAllLog : Ofstream
+    , eigenPLog : Ofstream
+    , eigenALog : Ofstream
+    , diagonalLog : Ofstream
+    , variancesLog : Ofstream
+    , nullspacesLog : Ofstream
+    , coarseTrackingLog : Ofstream
+
+    -- statistics stuff
+    , statistics_lastNumOptIts : Int
+    , statistics_numDroppedPoints : Int
+    , statistics_numActivatedPoints : Int
+    , statistics_numCreatedPoints : Int
+    , statistics_numForceDroppedResBwd : Int
+    , statistics_numForceDroppedResFwd : Int
+    , statistics_numMargResBwd : Int
+    , statistics_numMargResFwd : Int
+    , statistics_lastFineTrackRMSE : Float
+
+    -- changed by tracker-thread, protected by trackMutex
+    , trackMutex : Mutex
+    , allFrameHistory : Array FrameShell
+    , coarseInitializer : CoarseInitializer
+    , lastCoarseRMSE : Vec5
+
+    -- changed by mapper-thread, pretected by mapMutex
+    , mapMutex : Mutex
+    , allKeyFramesHistory : Array FrameShell
+    , ef : EnergyFunctional
+    , treadReduce : IndexThreadReduce Vec10
+    , selectionMap : Float
+    , pixelSelector : PixelSelector
+    , coarseDistanceMap : CoarseDistanceMap
+    , frameHessians : Array FrameHessian
+    , activeResiduals : Array PointFrameResidual
+    , currentMinActDist : Float
+
+    -- mutex for tracker exchange
+    , coarseTrackerSwapMutex : Mutex
+    , coarseTracker_forNewKF : CoarseTracker
+    , coarseTracker : CoarseTracker
+    , minIdJetVisTracker : Float
+    , maxIdJetVisTracker : Float
+    , minIdJetVisDebug : Float
+    , maxIdJetVisDebug : Float
+
+    -- mutex for camToWorld's in shells
+    , shellPoseMutex : Mutex
+
+    -- tracking / mapping sync, protected by trackMapSyncMutex
+    , trackMapSyncMutex : Mutex
+    , trackedFrameSignal : Condition_variable
+    , mappedFrameSignal : Condition_variable
+    , unmappedTrackedFrames : List FrameHessian
+    , needNewKFAfter : Int
+    , mappingThread : Thread
+    , runMapping : Bool
+    , needToKetchupMapping : Bool
+    , lastRefStopId : Int
     }
 
 
@@ -250,6 +355,79 @@ calcLMnergy model =
     Debug.crash "TODO"
 
 
-linearizeAll_Reductor : Bool -> Array PointFrameResidual -> Int -> Int -> Vec10 -> Int -> FullSystem -> FullSystem
+linearizeAll_Reductor : Bool -> Array PointFrameResidual -> Int -> Int -> Vec10 -> Int -> FullSystem -> ( FullSystem, Array PointFrameResidual, Vec10 )
 linearizeAll_Reductor fixLinearization toRemove min max stats tid model =
+    Debug.crash "TODO"
+
+
+{-| Rmq: stats and tid are not used.
+-}
+activatePointsMT_Reductor : Array PointHessian -> Array ImmaturePoint -> Int -> Int -> Vec10 -> Int -> FullSystem -> ( FullSystem, Array PointHessian )
+activatePointsMT_Reductor optimized toOptimize min max stats tid model =
+    Debug.crash "TODO"
+
+
+{-| Rmq: copyJacobians, stats and tid are not used.
+-}
+applyRes_Reductor : Bool -> Int -> Int -> Vec10 -> Int -> FullSystem -> FullSystem
+applyRes_Reductor copyJacobians min max stats tid =
+    Debug.crash "TODO"
+
+
+printOptRes : Vec3 -> Float -> Float -> Float -> Float -> Float -> Float -> FullSystem -> FullSystem
+printOptRes res resL resM resPrior lExact a b model =
+    Debug.crash "TODO"
+
+
+debugPlotTracking : FullSystem -> FullSystem
+debugPlotTracking model =
+    Debug.crash "TODO"
+
+
+getNullspaces : FullSystem -> ( FullSystem, VecX, VecX, VecX, VecX, VecX )
+getNullspaces model =
+    Debug.crash "TODO"
+
+
+setNewFrameEnergyTH : FullSystem -> FullSystem
+setNewFrameEnergyTH model =
+    Debug.crash "TODO"
+
+
+printLogLine : FullSystem -> FullSystem
+printLogLine model =
+    Debug.crash "TODO"
+
+
+printEvalLine : FullSystem -> FullSystem
+printEvalLine model =
+    Debug.crash "TODO"
+
+
+printEigenValLine : FullSystem -> FullSystem
+printEigenValLine model =
+    Debug.crash "TODO"
+
+
+
+-- Tracking always uses the newest KF as reference
+
+
+makeKeyFrame : FrameHessian -> FullSystem -> ( FullSystem, FrameHessian )
+makeKeyFrame fh model =
+    Debug.crash "TODO"
+
+
+makeNonKeyFrame : FrameHessian -> FullSystem -> ( FullSystem, FrameHessian )
+makeNonKeyFrame fh model =
+    Debug.crash "TODO"
+
+
+deliverTrackedFrame : FrameHessian -> Bool -> FullSystem -> ( FullSystem, FrameHessian )
+deliverTrackedFrame fh model =
+    Debug.crash "TODO"
+
+
+mappingLoop : FullSystem -> FullSystem
+mappingLoop model =
     Debug.crash "TODO"
