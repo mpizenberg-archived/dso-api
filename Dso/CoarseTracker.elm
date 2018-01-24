@@ -1,5 +1,11 @@
 module Dso.CoarseTracker exposing (CoarseTracker)
 
+{-| whatever
+
+@docs CoarseTracker
+
+-}
+
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
 import Dso.NumType exposing (AffLight, Mat33f, Mat88, SE3, Vec3, Vec3f, Vec5, Vec6, Vec8, Vec8f)
@@ -22,6 +28,8 @@ type Accumulator9
 -- MODEL #############################################################
 
 
+{-| whatever
+-}
 type alias CoarseTracker =
     { debugPrint : Bool
     , debugPlot : Bool

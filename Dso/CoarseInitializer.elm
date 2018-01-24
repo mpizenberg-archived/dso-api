@@ -1,5 +1,11 @@
 module Dso.CoarseInitializer exposing (CoarseInitializer)
 
+{-| whatever
+
+@docs CoarseInitializer
+
+-}
+
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)
 import Dso.NumType exposing (AffLight, Mat33f, Mat88, SE3, Vec10f, Vec2f, Vec3f, Vec8, Vec8f)
@@ -61,6 +67,8 @@ type alias Pnt =
     }
 
 
+{-| whatever
+-}
 type alias CoarseInitializer =
     { frameID : Int
     , fixAffine : Bool
