@@ -7,6 +7,9 @@
         "."
     ],
     "exposed-modules": [
+        "Dso.AvoidCyclic",
+        "Dso.CoarseInitializer",
+        "Dso.CoarseTracker",
         "Dso.NumType",
         "Dso.FullSystem",
         "Dso.HessianBlocks",
