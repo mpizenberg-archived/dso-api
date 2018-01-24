@@ -7,10 +7,11 @@
         "."
     ],
     "exposed-modules": [
+        "Dso.Undistort",
+        "Dso.NumType",
         "Dso.AvoidCyclic",
         "Dso.CoarseInitializer",
         "Dso.CoarseTracker",
-        "Dso.NumType",
         "Dso.FullSystem",
         "Dso.HessianBlocks",
         "Dso.ImmaturePoint",
