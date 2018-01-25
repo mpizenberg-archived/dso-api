@@ -6,20 +6,7 @@
     "source-directories": [
         "."
     ],
-    "exposed-modules": [
-        "Dso.Undistort",
-        "Dso.NumType",
-        "Dso.AvoidCyclic",
-        "Dso.CoarseInitializer",
-        "Dso.CoarseTracker",
-        "Dso.FullSystem",
-        "Dso.HessianBlocks",
-        "Dso.ImmaturePoint",
-        "Dso.PixelSelector",
-        "Dso.PixelSelector2",
-        "Dso.ResidualProjections",
-        "Dso.Residuals"
-    ],
+    "exposed-modules": [],
     "dependencies": {
         "elm-lang/core": "5.1.1 <= v < 6.0.0"
     },
