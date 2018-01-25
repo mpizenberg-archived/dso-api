@@ -23,3 +23,7 @@ type Vector4f
 
 type DiagonalMatrix8
     = DiagonalMatrix8
+
+
+type Matrix3f
+    = Matrix3f
