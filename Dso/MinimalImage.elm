@@ -10,6 +10,10 @@ type alias MinimalImage a =
     }
 
 
+type Vec3b
+    = Vec3b
+
+
 
 -- FUNCTIONS #########################################################
 
