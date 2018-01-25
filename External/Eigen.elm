@@ -21,6 +21,10 @@ type Vector4f
     = Vector4f
 
 
+type VectorXf
+    = VectorXf
+
+
 type DiagonalMatrix8
     = DiagonalMatrix8
 

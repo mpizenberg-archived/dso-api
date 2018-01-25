@@ -1,13 +1,4 @@
-module Dso.Undistort
-    exposing
-        ( PhotometricUndistorter
-        )
-
-{-| whatever
-
-@docs PhotometricUndistorter
-
--}
+module Dso.Undistort exposing (..)
 
 import Array exposing (Array)
 import Dso.NumType exposing (Mat33, VecX)

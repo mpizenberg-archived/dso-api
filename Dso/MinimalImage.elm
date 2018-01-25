@@ -1,6 +1,21 @@
 module Dso.MinimalImage exposing (..)
 
+import Dso.NumType exposing (Vec3f)
+
+
 -- MODEL #############################################################
+
+
+type Uint8
+    = Uint8
+
+
+type Uint16
+    = Uint16
+
+
+type Vec3b
+    = Vec3b
 
 
 type alias MinimalImage a =
@@ -10,8 +25,24 @@ type alias MinimalImage a =
     }
 
 
-type Vec3b
-    = Vec3b
+type alias MinimalImageF =
+    MinimalImage Float
+
+
+type alias MinimalImageF3 =
+    MinimalImage Vec3f
+
+
+type alias MinimalImageB =
+    MinimalImage Uint8
+
+
+type alias MinimalImageB3 =
+    MinimalImage Vec3b
+
+
+type alias MinimalImageB16 =
+    MinimalImage Uint16
 
 
 
