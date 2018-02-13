@@ -1,17 +1,10 @@
 module Dso.EnergyFunctionalStructs exposing (..)
 
+import Dso.AvoidCyclic exposing (EnergyFunctional)
 import Dso.HessianBlocks exposing (FrameHessian, PointHessian)
 import Dso.NumType exposing (Vec8, Vec8f, VecCf, VecNRf)
 import Dso.RawResidualJacobian exposing (RawResidualJacobian)
 import Dso.Residuals exposing (PointFrameResidual)
-
-
--- UNKNOWN ###########################################################
-
-
-type EnergyFunctional
-    = EnergyFunctional
-
 
 
 -- MODEL #############################################################

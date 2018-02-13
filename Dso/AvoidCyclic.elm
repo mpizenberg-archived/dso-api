@@ -11,3 +11,7 @@ type FrameHessian
 
 type PointHessian
     = PointHessian
+
+
+type EnergyFunctional
+    = EnergyFunctional
