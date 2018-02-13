@@ -31,3 +31,7 @@ type DiagonalMatrix8
 
 type Matrix3f
     = Matrix3f
+
+
+type Matrix
+    = Matrix
