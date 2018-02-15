@@ -6,6 +6,7 @@ import Dso.CoarseTracker exposing (CoarseDistanceMap, CoarseTracker)
 import Dso.EnergyFunctional exposing (EnergyFunctional)
 import Dso.FrameShell exposing (FrameShell)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.IOWrap.Output3DWrapper exposing (Output3DWrapper)
 import Dso.ImageAndExposure exposing (ImageAndExposure)
 import Dso.ImmaturePoint exposing (ImmaturePoint, ImmaturePointTemporaryResidual)
 import Dso.IndexThreadReduce exposing (IndexThreadReduce)
@@ -14,14 +15,6 @@ import Dso.PixelSelector2 exposing (PixelSelector)
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Boost exposing (Condition_variable, Mutex, Thread)
 import External.Std exposing (Ofstream)
-
-
--- UNKNOWN ###########################################################
-
-
-type Output3DWrapper
-    = Output3DWrapper
-
 
 
 -- MODEL #############################################################
