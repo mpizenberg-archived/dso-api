@@ -1,45 +1,12 @@
-module Dso.HessianBlocks
-    exposing
-        ( CalibHessian
-        , FrameHessian
-        , PointHessian
-        , defines
-        )
-
-{-| module ...
-
-@docs FrameHessian, CalibHessian, PointHessian, defines
-
--}
+module Dso.HessianBlocks exposing (..)
 
 import Array exposing (Array)
+import Dso.AvoidCyclic exposing (EFFrame, EFPoint, ImmaturePoint)
+import Dso.FrameShell exposing (FrameShell)
+import Dso.MinimalImage exposing (MinimalImageB3)
 import Dso.NumType exposing (AffLight, Mat33f, Mat42, Mat66, SE3, Vec10, Vec2, Vec2f, Vec3f, Vec6, VecC)
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Eigen as Eigen
-
-
--- UNKNOWN ###########################################################
-
-
-type EFFrame
-    = EFFrame
-
-
-type FrameShell
-    = FrameShell
-
-
-type ImmaturePoint
-    = ImmaturePoint
-
-
-type MinimalImageB3
-    = MinimalImageB3
-
-
-type EFPoint
-    = EFPoint
-
 
 
 -- MODEL #############################################################

@@ -1,33 +1,10 @@
-module Dso.Residuals
-    exposing
-        ( PointFrameResidual
-        , ResState
-        )
-
-{-| module ...
-
-@docs PointFrameResidual, ResState
-
--}
-
--- import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+module Dso.Residuals exposing (..)
 
 import Array exposing (Array)
-import Dso.AvoidCyclic exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.AvoidCyclic exposing (CalibHessian, EFResidual, FrameHessian, PointHessian)
 import Dso.NumType exposing (Vec3f)
+import Dso.RawResidualJacobian exposing (RawResidualJacobian)
 import External.Eigen as Eigen
-
-
--- UNKNOWN ###########################################################
-
-
-type EFResidual
-    = EFResidual
-
-
-type RawResidualJacobian
-    = RawResidualJacobian
-
 
 
 -- MODEL #############################################################

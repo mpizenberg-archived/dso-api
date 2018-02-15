@@ -1,11 +1,5 @@
 module Dso.ResidualProjections exposing (derive_idepth)
 
-{-| module ...
-
-@docs derive_idepth
-
--}
-
 import Dso.HessianBlocks exposing (CalibHessian)
 import Dso.NumType exposing (Mat33f, Vec3f)
 

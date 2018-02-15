@@ -1,7 +1,7 @@
 module Dso.AccumulatedSCHessian exposing (..)
 
 import Array exposing (Array)
-import Dso.EnergyFunctional exposing (EnergyFunctional)
+import Dso.AvoidCyclic exposing (EnergyFunctional)
 import Dso.EnergyFunctionalStructs exposing (EFPoint)
 import Dso.IndexThreadReduce exposing (IndexThreadReduce)
 import Dso.MatrixAccumulators exposing (AccumulatorApprox)

@@ -1,13 +1,8 @@
-module Dso.CoarseTracker exposing (CoarseTracker)
-
-{-| whatever
-
-@docs CoarseTracker
-
--}
+module Dso.CoarseTracker exposing (..)
 
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.MatrixAccumulators exposing (Accumulator9)
 import Dso.NumType exposing (AffLight, Mat33f, Mat88, SE3, Vec3, Vec3f, Vec5, Vec6, Vec8, Vec8f)
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Eigen exposing (Vector2i)
@@ -18,10 +13,6 @@ import External.Eigen exposing (Vector2i)
 
 type Output3DWrapper
     = Output3DWrapper
-
-
-type Accumulator9
-    = Accumulator9
 
 
 

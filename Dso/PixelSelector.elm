@@ -1,10 +1,4 @@
-module Dso.PixelSelector exposing (minUseGrad_pixsel)
-
-{-| module ...
-
-@docs minUseGrad_pixsel
-
--}
+module Dso.PixelSelector exposing (..)
 
 import Array exposing (Array)
 import External.Eigen as Eigen

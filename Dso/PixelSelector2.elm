@@ -1,10 +1,4 @@
-module Dso.PixelSelector2 exposing (PixelSelector)
-
-{-| module ...
-
-@docs PixelSelector
-
--}
+module Dso.PixelSelector2 exposing (..)
 
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (FrameHessian)

@@ -1,15 +1,4 @@
-module Dso.ImmaturePoint
-    exposing
-        ( ImmaturePoint
-        , ImmaturePointStatus
-        , ImmaturePointTemporaryResidual
-        )
-
-{-| module ...
-
-@docs ImmaturePointStatus, ImmaturePoint, ImmaturePointTemporaryResidual
-
--}
+module Dso.ImmaturePoint exposing (..)
 
 import Array exposing (Array)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)

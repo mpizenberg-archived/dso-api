@@ -2,24 +2,14 @@ module Dso.EnergyFunctional exposing (..)
 
 import Array exposing (Array)
 import Dict exposing (Dict)
+import Dso.AccumulatedSCHessian exposing (AccumulatedSCHessianSSE)
+import Dso.AccumulatedTopHessian exposing (AccumulatedTopHessianSSE)
 import Dso.EnergyFunctionalStructs exposing (EFFrame, EFPoint, EFResidual)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
 import Dso.IndexThreadReduce exposing (IndexThreadReduce)
 import Dso.NumType exposing (Mat18f, Mat88, Mat88f, MatXX, Vec10, VecC, VecCf, VecX)
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Eigen as Eigen
-
-
--- UNKNOWN ###########################################################
-
-
-type AccumulatedTopHessianSSE
-    = AccumulatedTopHessianSSE
-
-
-type AccumulatedSCHessianSSE
-    = AccumulatedSCHessianSSE
-
 
 
 -- MODEL #############################################################

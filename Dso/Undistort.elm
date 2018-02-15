@@ -1,20 +1,10 @@
 module Dso.Undistort exposing (..)
 
 import Array exposing (Array)
+import Dso.ImageAndExposure exposing (ImageAndExposure)
+import Dso.MinimalImage exposing (MinimalImage)
 import Dso.NumType exposing (Mat33, VecX)
 import External.Eigen exposing (Vector2i)
-
-
--- UNKNOWN ###########################################################
-
-
-type ImageAndExposure
-    = ImageAndExposure
-
-
-type MinimalImage
-    = MinimalImage
-
 
 
 -- MODEL #############################################################
