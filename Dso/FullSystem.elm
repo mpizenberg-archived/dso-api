@@ -4,16 +4,23 @@ import Array exposing (Array)
 import Dso.CoarseInitializer exposing (CoarseInitializer)
 import Dso.CoarseTracker exposing (CoarseDistanceMap, CoarseTracker)
 import Dso.EnergyFunctional exposing (EnergyFunctional)
+import Dso.EnergyFunctionalStructs
 import Dso.FrameShell exposing (FrameShell)
+import Dso.GlobalCalib
+import Dso.GlobalFuncs
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.IOWrap.ImageDisplay
 import Dso.IOWrap.Output3DWrapper exposing (Output3DWrapper)
 import Dso.ImageAndExposure exposing (ImageAndExposure)
 import Dso.ImmaturePoint exposing (ImmaturePoint, ImmaturePointTemporaryResidual)
 import Dso.IndexThreadReduce exposing (IndexThreadReduce)
 import Dso.NumType exposing (MatXX, Vec10, Vec3, Vec4, Vec5, VecX, VecXf)
+import Dso.PixelSelector
 import Dso.PixelSelector2 exposing (PixelSelector)
+import Dso.ResidualProjections
 import Dso.Residuals exposing (PointFrameResidual)
 import External.Boost exposing (Condition_variable, Mutex, Thread)
+import External.Eigen
 import External.Std exposing (Ofstream)
 
 

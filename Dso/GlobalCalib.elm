@@ -1,6 +1,8 @@
 module Dso.GlobalCalib exposing (..)
 
 import Array exposing (Array)
+import Dso.NumType
+import Dso.Settings
 import External.Eigen exposing (Matrix3f)
 
 

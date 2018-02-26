@@ -1,12 +1,18 @@
 module Dso.CoarseInitializer exposing (CoarseInitializer)
 
 import Array exposing (Array)
+import Dso.AvoidCyclic
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)
 import Dso.IOWrap.Output3DWrapper exposing (Output3DWrapper)
 import Dso.MatrixAccumulators exposing (Accumulator9)
 import Dso.NumType exposing (AffLight, Mat33f, Mat88, SE3, Vec10f, Vec2f, Vec3f, Vec8, Vec8f)
+import Dso.PixelSelector
+import Dso.PixelSelector2
+import Dso.Residuals
+import Dso.Settings
 import External.Eigen exposing (DiagonalMatrix8, Vector3f)
 import External.Nanoflann exposing (BBOX)
+import External.Std
 
 
 -- MODEL #############################################################

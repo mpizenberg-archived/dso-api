@@ -4,6 +4,7 @@ import Array exposing (Array)
 import Dict exposing (Dict)
 import Dso.AccumulatedSCHessian exposing (AccumulatedSCHessianSSE)
 import Dso.AccumulatedTopHessian exposing (AccumulatedTopHessianSSE)
+import Dso.AvoidCyclic
 import Dso.EnergyFunctionalStructs exposing (EFFrame, EFPoint, EFResidual)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
 import Dso.IndexThreadReduce exposing (IndexThreadReduce)

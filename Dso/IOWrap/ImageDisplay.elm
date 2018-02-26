@@ -2,6 +2,7 @@ module Dso.IOWrap.ImageDisplay exposing (..)
 
 import Array exposing (Array)
 import Dso.MinimalImage exposing (MinimalImage)
+import Dso.NumType
 
 
 -- FUNCTIONS #########################################################

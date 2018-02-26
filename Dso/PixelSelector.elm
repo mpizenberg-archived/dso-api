@@ -1,6 +1,7 @@
 module Dso.PixelSelector exposing (..)
 
 import Array exposing (Array)
+import Dso.NumType
 import External.Eigen as Eigen
 
 

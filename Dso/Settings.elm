@@ -1,5 +1,7 @@
 module Dso.Settings exposing (..)
 
+import External.Boost
+
 
 defines =
     { pyrLevel_keyframesPerSecond = 0

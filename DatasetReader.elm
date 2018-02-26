@@ -1,18 +1,16 @@
 module DatasetReader exposing (..)
 
 import Array exposing (Array)
+import Dso.GlobalCalib
+import Dso.GlobalFuncs
+import Dso.IOWrap.ImageRW
 import Dso.ImageAndExposure exposing (ImageAndExposure)
 import Dso.MinimalImage exposing (MinimalImageB, Uint8)
+import Dso.Settings
 import Dso.Undistort exposing (Undistort)
+import External.Boost
 import External.Eigen exposing (Matrix3f, Vector2i, VectorXf)
-
-
--- UNKNOWN ###########################################################
-
-
-type Zip_t
-    = Zip_t
-
+import External.Zip exposing (Zip_t)
 
 
 -- MODEL #############################################################

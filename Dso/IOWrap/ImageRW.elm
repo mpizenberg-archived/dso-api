@@ -2,6 +2,7 @@ module Dso.IOWrap.ImageRW exposing (..)
 
 import Array exposing (Array)
 import Dso.MinimalImage exposing (MinimalImage, MinimalImageB, MinimalImageB3, MinimalImageF, MinimalImageF3, Uint16)
+import Dso.NumType
 
 
 -- FUNCTIONS #########################################################

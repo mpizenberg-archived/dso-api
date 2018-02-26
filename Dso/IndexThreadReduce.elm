@@ -1,6 +1,7 @@
 module Dso.IndexThreadReduce exposing (..)
 
 import Array exposing (Array)
+import Dso.Settings
 import External.Boost as Boost
 
 

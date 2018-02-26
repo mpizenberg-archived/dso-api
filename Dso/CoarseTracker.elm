@@ -1,12 +1,18 @@
 module Dso.CoarseTracker exposing (..)
 
 import Array exposing (Array)
+import Dso.AvoidCyclic
+import Dso.EnergyFunctionalStructs
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian, PointHessian)
+import Dso.IOWrap.ImageRW
 import Dso.IOWrap.Output3DWrapper exposing (Output3DWrapper)
 import Dso.MatrixAccumulators exposing (Accumulator9)
 import Dso.NumType exposing (AffLight, Mat33f, Mat88, SE3, Vec3, Vec3f, Vec5, Vec6, Vec8, Vec8f)
 import Dso.Residuals exposing (PointFrameResidual)
+import Dso.Settings
 import External.Eigen exposing (Vector2i)
+import External.SSE
+import External.Std
 
 
 -- MODEL #############################################################

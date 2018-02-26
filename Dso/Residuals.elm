@@ -2,9 +2,13 @@ module Dso.Residuals exposing (..)
 
 import Array exposing (Array)
 import Dso.AvoidCyclic exposing (CalibHessian, EFResidual, FrameHessian, PointHessian)
+import Dso.GlobalCalib
+import Dso.GlobalFuncs
+import Dso.IOWrap.ImageDisplay
 import Dso.NumType exposing (Vec3f)
 import Dso.RawResidualJacobian exposing (RawResidualJacobian)
 import External.Eigen as Eigen
+import External.Std
 
 
 -- MODEL #############################################################

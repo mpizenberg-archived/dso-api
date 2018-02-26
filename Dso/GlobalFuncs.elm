@@ -1,8 +1,10 @@
 module Dso.GlobalFuncs exposing (..)
 
 import Array exposing (Array)
+import Dso.IOWrap.ImageDisplay
 import Dso.MinimalImage exposing (Vec3b)
 import Dso.NumType exposing (Vec3f)
+import Dso.Settings
 import External.Eigen exposing (Vector2f, Vector3f, Vector4f)
 
 

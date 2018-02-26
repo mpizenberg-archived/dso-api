@@ -5,7 +5,9 @@ import Dict exposing (Dict)
 import Dso.FrameShell exposing (FrameShell)
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)
 import Dso.MinimalImage exposing (MinimalImageB3, MinimalImageF)
+import Dso.NumType
 import External.Eigen as Eigen
+import External.Std
 
 
 -- MODEL #############################################################

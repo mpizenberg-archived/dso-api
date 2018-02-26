@@ -1,8 +1,10 @@
 module Dso.ImmaturePoint exposing (..)
 
 import Array exposing (Array)
+import Dso.FrameShell
 import Dso.HessianBlocks exposing (CalibHessian, FrameHessian)
 import Dso.NumType exposing (Mat22f, Mat33f, Vec2f, Vec3f)
+import Dso.ResidualProjections
 import Dso.Residuals
 
 

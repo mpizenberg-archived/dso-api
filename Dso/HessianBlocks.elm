@@ -3,6 +3,8 @@ module Dso.HessianBlocks exposing (..)
 import Array exposing (Array)
 import Dso.AvoidCyclic exposing (EFFrame, EFPoint, ImmaturePoint)
 import Dso.FrameShell exposing (FrameShell)
+import Dso.GlobalCalib
+import Dso.ImageAndExposure
 import Dso.MinimalImage exposing (MinimalImageB3)
 import Dso.NumType exposing (AffLight, Mat33f, Mat42, Mat66, SE3, Vec10, Vec2, Vec2f, Vec3f, Vec6, VecC)
 import Dso.Residuals exposing (PointFrameResidual)

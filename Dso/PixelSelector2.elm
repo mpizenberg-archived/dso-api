@@ -1,7 +1,11 @@
 module Dso.PixelSelector2 exposing (..)
 
 import Array exposing (Array)
+import Dso.GlobalCalib
+import Dso.GlobalFuncs
 import Dso.HessianBlocks exposing (FrameHessian)
+import Dso.IOWrap.ImageDisplay
+import Dso.NumType
 import External.Eigen as Eigen
 
 

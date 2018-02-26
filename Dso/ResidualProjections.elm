@@ -1,7 +1,9 @@
 module Dso.ResidualProjections exposing (derive_idepth)
 
+import Dso.AvoidCyclic
 import Dso.HessianBlocks exposing (CalibHessian)
 import Dso.NumType exposing (Mat33f, Vec3f)
+import Dso.Settings
 
 
 -- FUNCTIONS #########################################################
