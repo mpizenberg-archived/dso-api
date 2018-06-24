@@ -101,6 +101,7 @@ type alias FrameHessian =
     -- constant info and pre-calculated values
     , shell : FrameShell
 
+    -- First level of pyramid (dI = dIp[0])
     -- trace, fine tracking
     -- used for direction select (not for gradient histograms etc.)
     , dI : Eigen.Vector3f

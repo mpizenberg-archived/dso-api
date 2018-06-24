@@ -25,18 +25,18 @@ type alias CoarseTracker =
     , debugPlot : Bool
 
     -- pyramid levels
-    , k : Array Mat33f
-    , ki : Array Mat33f
-    , fx : Array Float
-    , fy : Array Float
-    , fxi : Array Float
-    , fyi : Array Float
-    , cx : Array Float
-    , cy : Array Float
-    , cxi : Array Float
-    , cyi : Array Float
     , w : Array Int
     , h : Array Int
+    , k : Array Mat33f
+    , fx : Array Float
+    , fy : Array Float
+    , cx : Array Float
+    , cy : Array Float
+    , ki : Array Mat33f
+    , fxi : Array Float
+    , fyi : Array Float
+    , cxi : Array Float
+    , cyi : Array Float
 
     -- stuff
     , lastRef : FrameHessian
@@ -55,7 +55,7 @@ type alias CoarseTracker =
     , weightSums : Array Float
     , weightSums_bak : Array Float
 
-    -- pc buffers
+    -- pc buffers (pc = Point Cloud?)
     , pc_u : Array (Array Float)
     , pc_v : Array (Array Float)
     , pc_idepth : Array (Array Float)
